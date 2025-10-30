@@ -7,14 +7,6 @@ A simple web-based Memory / Concentration game. Flip cards to find matching pair
 - Match tracking and move counter
 - Simple animation and responsive layout
 - Easy to customize card faces and difficulty
-
-## How to run
-1. Clone or copy the project folder to your machine.
-2. Open `index.html` in a browser OR serve the folder with a static server:
-    - Python 3: `python -m http.server 8000`
-    - Node (http-server): `npx http-server . -p 8000`
-3. Visit `http://localhost:8000` (if using a server) and play.
-
 ## Gameplay
 - Flip two cards per turn.
 - If they match they stay revealed; otherwise they flip back.
