@@ -1,0 +1,114 @@
+body{
+
+font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+     background-image: repeating-linear-gradient(135deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px,transparent 10px, transparent 11px),repeating-linear-gradient(22.5deg, rgb(0,0,0) 0px, rgb(0,0,0) 10px,transparent 10px, transparent 11px),linear-gradient(90deg, hsl(194,74%,56%),hsl(266,74%,56%),hsl(338,74%,56%),hsl(50,74%,56%),hsl(122,74%,56%)););
+   
+      
+      margin: 0;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #19a1b3;;
+      margin-bottom: 50px;
+    }
+
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      grid-gap: 15px;
+    }
+
+    .card {
+      width: 80px;
+      height: 80px;
+      background-color: #e9fac2;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card.revealed {
+      cursor: default;
+      transform: none;
+    }
+
+    .hidden-color {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background-color: transparent;
+    }
+
+    .card.flipped .hidden-color,
+    .card.revealed .hidden-color {
+      background-color: var(--color);
+    }
+
+    .reset-btn {
+      margin-top: 80px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: #19a1b3;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .reset-btn:hover {
+      background-color:#fff;
+    }
+
+    
+    .win-message {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      color: white;
+      z-index: 10;
+    }
+
+    .win-message.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .win-message h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .play-again {
+      padding: 10px 20px;
+      background: #fff;
+      color: #333;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .play-again:hover {
+      background: #ddd;
+    }
